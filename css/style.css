@@ -1,0 +1,315 @@
+:root {
+  --cream: #f3ede3;
+  --cream-2: #e8dfd0;
+  --paper: #faf6ef;
+  --espresso: #2a1a14;
+  --espresso-2: #3d2a22;
+  --ink: #1c120e;
+  --muted: #6e5a4e;
+  --line: rgba(42, 26, 20, 0.14);
+  --gold: #8a6b4a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Outfit", sans-serif;
+  background: var(--cream);
+  color: var(--espresso);
+  line-height: 1.65;
+  font-weight: 400;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font-family: inherit; }
+
+.promo {
+  background: var(--espresso);
+  color: var(--cream);
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgba(243, 237, 227, 0.92);
+  backdrop-filter: blur(10px);
+  z-index: 40;
+}
+.nav a { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; }
+.nav-links, .nav-cta { display: flex; gap: 28px; align-items: center; }
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.logo small {
+  display: block;
+  font-family: "Outfit", sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-top: -4px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--espresso);
+  padding: 12px 22px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--espresso);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.btn:hover { background: var(--espresso); color: var(--cream); }
+.btn-solid { background: var(--espresso); color: var(--cream); }
+.btn-solid:hover { background: var(--espresso-2); }
+.menu-btn {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+body.home .promo {
+  background: var(--cream-2);
+  color: var(--espresso);
+}
+body.home .nav {
+  background: var(--espresso);
+  border-bottom-color: rgba(243, 237, 227, 0.12);
+}
+body.home .nav a,
+body.home .logo,
+body.home .menu-btn {
+  color: var(--cream);
+}
+body.home .btn {
+  border-color: var(--cream);
+  color: var(--cream);
+}
+body.home .btn:hover,
+body.home .btn-solid {
+  background: var(--cream);
+  color: var(--espresso);
+}
+body.home .hero {
+  background: var(--espresso);
+  color: var(--cream);
+  padding: 0 0 72px;
+}
+body.home .lede { color: rgba(243, 237, 227, 0.72); }
+
+.hero { padding: 72px 40px 40px; text-align: center; }
+.hero-copy { padding: 48px 40px 0; }
+.hero-video {
+  width: 100%;
+  height: 78vh;
+  min-height: 420px;
+  overflow: hidden;
+  background: #111;
+}
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.kicker {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 7vw, 88px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  max-width: 980px;
+  margin: 0 auto 18px;
+}
+.hero h1 em { font-style: italic; }
+.lede {
+  max-width: 560px;
+  margin: 0 auto 32px;
+  color: var(--muted);
+  font-size: 17px;
+  font-weight: 300;
+}
+.hero-img {
+  margin: 36px auto 0;
+  max-width: 1100px;
+  height: 62vh;
+  min-height: 380px;
+  overflow: hidden;
+}
+.hero-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.section { padding: 88px 40px; }
+.wrap { max-width: 1100px; margin: 0 auto; }
+.narrow { max-width: 760px; margin: 0 auto; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 500;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+p { margin-bottom: 14px; }
+.muted { color: var(--muted); }
+.espresso-band {
+  background: var(--espresso);
+  color: var(--cream);
+}
+.espresso-band .muted { color: rgba(243, 237, 227, 0.72); }
+.espresso-band .btn { border-color: var(--cream); color: var(--cream); }
+.espresso-band .btn:hover { background: var(--cream); color: var(--espresso); }
+
+.cards-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.card {
+  border: 1px solid var(--line);
+  padding: 28px 24px;
+  background: var(--paper);
+}
+.card h4 {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.list { list-style: none; }
+.list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+.list li:last-child { border-bottom: 0; }
+
+.form {
+  display: grid;
+  gap: 12px;
+  max-width: 640px;
+}
+.form.grid-2 { grid-template-columns: 1fr 1fr; }
+.form input, .form textarea, .form select {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  color: var(--espresso);
+  outline: none;
+}
+.form textarea { min-height: 120px; resize: vertical; }
+.consent { grid-column: 1 / -1; font-size: 13px; color: var(--muted); display: flex; gap: 10px; align-items: flex-start; }
+.full { grid-column: 1 / -1; }
+.toast {
+  display: none;
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--gold);
+}
+
+.team { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.team article img { height: 340px; width: 100%; object-fit: cover; margin-bottom: 14px; }
+.team h4 { font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 500; }
+.team .role { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin: 4px 0 10px; }
+
+.faq details {
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+.faq summary {
+  cursor: pointer;
+  font-size: 18px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-weight: 400;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 22px; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding-top: 12px; color: var(--muted); }
+
+.page-hero { padding: 72px 40px 24px; text-align: center; }
+.page-hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+footer {
+  background: var(--espresso);
+  color: var(--cream);
+  padding: 64px 40px 28px;
+}
+.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; max-width: 1100px; margin: 0 auto 40px; }
+footer h5 { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #c4b08a; margin-bottom: 16px; }
+footer a, footer p { color: rgba(243, 237, 227, 0.86); font-size: 14px; display: block; margin-bottom: 8px; }
+.copy {
+  border-top: 1px solid rgba(243, 237, 227, 0.15);
+  padding-top: 18px;
+  font-size: 12px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.hours { display: grid; grid-template-columns: 1fr auto; gap: 8px 24px; max-width: 360px; }
+.amenity-img { height: 520px; object-fit: cover; width: 100%; }
+
+@media (max-width: 900px) {
+  .nav { padding: 14px 18px; }
+  .nav-links, .nav-cta { display: none; }
+  .nav.open .nav-links, .nav.open .nav-cta {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    padding: 20px;
+    border-bottom: 1px solid var(--line);
+    gap: 16px;
+  }
+  body.home .nav.open .nav-links,
+  body.home .nav.open .nav-cta {
+    background: var(--espresso);
+  }
+  .menu-btn { display: block; }
+  .hero, .section, .page-hero, footer { padding-left: 20px; padding-right: 20px; }
+  .split, .cards-3, .team, .foot-grid, .form.grid-2 { grid-template-columns: 1fr; }
+  .hero-img { height: 42vh; min-height: 240px; }
+  .hero-video { height: 52vh; min-height: 280px; }
+}
